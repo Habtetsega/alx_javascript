@@ -1,4 +1,4 @@
 exports.addMeMaybe = function (number, theFunction){
-	number+=1;
+	number = number:+1;
 	theFunction();
 }
