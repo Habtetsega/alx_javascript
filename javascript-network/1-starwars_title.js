@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const r = require('request');
 const url = "https://swapi-api.alx-tools.com/api/films/:id";
-request(url, (error, response, body)=>{
+r(url, (error, response, body)=>{
 	if (error){
 		console.error('Error:', error);
 	}else if(response.satuseCode!==200){
