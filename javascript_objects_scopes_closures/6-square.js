@@ -1,3 +1,4 @@
+import { Square } from '/5-square.js';
 class Square extends Square{
 	
 	charPrint(c){

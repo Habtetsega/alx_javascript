@@ -1,3 +1,4 @@
+#!/usr/bin/node
 class Rectangle{
         w;
         h;
