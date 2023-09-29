@@ -6,6 +6,6 @@ r(url, (error, response, body)=>{
 		console.error('Error:', error);
 	}else{
 		const movie = JSON.parse(body);
-		console.logo(movie.title);
+		console.log(movie.title);
 	}
 });

@@ -15,7 +15,7 @@ request(apiUrl, (error, response, body) => {
     const films = JSON.parse(body);
     
     // Filter the films where Wedge Antilles is present
-    const filmsWithWedgeAntilles = films.filter(film => film.characters.includes(https://swapi-api.alx-tools.com/api/people/${characterId}/));
+    const filmsWithWedgeAntilles = films.filter(film => film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/'));
     
     // Print the number of movies where Wedge Antilles is present
     console.log(filmsWithWedgeAntilles.length);

@@ -14,7 +14,6 @@ request(url, (error, response, body) => {
       if (error) {
         console.error('Error saving file:', error);
       } else {
-        console.log('File saved successfully!');
         // Print the response body
         console.log(body);
       }
