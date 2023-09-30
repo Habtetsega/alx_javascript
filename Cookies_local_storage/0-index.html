@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+	<head>
+		<title></title>
+		<script>
+			var fn = document.getElementById("firstname").value;
+			var eml = document.getElementById("email").value;
+			function setCookies(){
+				document.cookie = "firstname=fn";
+				document.cookie = "email=eml";
+			}
+			function showCookies(){
+				document.createElement("p");
+				document.getElementById("P").innerHTML = "Cookies:"+ document.cookie;
+			}
+		</script>
+	</head>
+	<body>
+		<big>Login to the website</big>
+		<div class="first line" style="white-space: nowrap;"><input id = "firstname">
+		<input id = "email">
+		<button onClick = "setCookies();">Log me in</button>
+		</div>
+		<big>Cookies</big>
+		<button onClick = "setCookies();">showCookies</button>
+	</body>
+</html>
