@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Management</title>
+</head>
+<body>
+  <input type="text" id="firstname" placeholder="First Name">
+  <input type="email" id="email" placeholder="Email">
+  <button onclick="setCookies()">Log me in</button>
+  <button onclick="showCookies()">Show the cookies</button>
+
+  <script>
+    function setCookies() {
+      var firstname = document.getElementById('firstname').value;
+      var email = document.getElementById('email').value;
+
+      var expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + 10);
+
+      document.cookie = firstname=${firstname}; expires=${expirationDate.toUTCString()};
+      document.cookie = email=${email}; expires=${expirationDate.toUTCString()};
+    }
+
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookiePair = cookies[i].split('=');
+        var cookieName = cookiePair[0].trim();
+
+        if (cookieName === name) {
+          return cookiePair[1];
+        }
+      }
+
+      return '';
+    }
+
+    function showCookies() {
+      var email = getCookie('email') || '';
+      var firstname = getCookie('firstname') || '';
+
+      var paragraph = document.createElement('p');
+      paragraph.innerHTML = Email: ${email} - Firstname: ${firstname};
+
+      document.body.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>

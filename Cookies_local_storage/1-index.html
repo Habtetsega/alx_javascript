@@ -14,8 +14,11 @@
       var firstname = document.getElementById('firstname').value;
       var email = document.getElementById('email').value;
 
-      document.cookie = firstname=${firstname};
-      document.cookie = email=${email};
+      var expirationDate = new Date();
+      expirationDate.setDate(expirationDate.getDate() + 10);
+
+      document.cookie = firstname=${firstname}; expires=${expirationDate.toUTCString()};
+      document.cookie = email=${email}; expires=${expirationDate.toUTCString()};
     }
 
     function showCookies() {
