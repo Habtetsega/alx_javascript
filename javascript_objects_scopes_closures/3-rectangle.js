@@ -19,3 +19,4 @@ class Rectangle{
 		}
 	}
 }
+module.exports = Reactangle;
