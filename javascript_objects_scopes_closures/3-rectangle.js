@@ -1,21 +1,17 @@
 #!/usr/bin/node
-class Rectangle{
-        constructor(w,h){
-                this.width = w;
-                this.height = h;
-                if (h<=0 && w<=0){
-                        const sth = new object{};
-                }
-        }
-	print(){
-		let w = this.width;
-		let h = this.height;
-		for(let j=0; j<h; j++){
-			for(let i=0; i<w; i++){
-				console.log("x")
-			}
-			console.log("\n")
-		}
-	}
+class Rectangle {
+  constructor(w, h) {
+    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
+      return {};
+    }
+    this.width = w;
+    this.height = h;
+  }
+
+  print() {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
+    }
+  }
 }
-module.exports = Reactangle;
+module.exports = Rectangle;
